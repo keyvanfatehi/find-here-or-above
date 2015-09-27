@@ -1,0 +1,19 @@
+{
+  "name": "find-here-or-above",
+  "version": "1.0.0",
+  "description": "find a file by name in the given path, otherwise climb up until it's found or root is reached",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keyvanfatehi/find-here-or-above.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/keyvanfatehi/find-here-or-above/issues"
+  },
+  "homepage": "https://github.com/keyvanfatehi/find-here-or-above#readme"
+}
