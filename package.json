@@ -1,6 +1,6 @@
 {
   "name": "find-here-or-above",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "find a file by name in the given path, otherwise climb up until it's found or root is reached",
   "main": "index.js",
   "scripts": {

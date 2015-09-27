@@ -2,11 +2,17 @@ var fs = require('fs');
 var path = require('path');
 
 module.exports = function(dir, name, cb) {
-  for (var fp = null; fp === null; fp = findRealPathSync(dir, name))
-    if (dir === '/')
-      break;
-    else
-      dir = path.join(dir, '..');
+  var fp = findRealPathSync(dir, name);
+
+  if (fp === null) {
+    for (var fp = null; fp === null; fp = findRealPathSync(dir, name)) {
+      if (dir === '/')
+        break;
+      else
+        dir = path.join(dir, '..');
+    }
+  }
+
   if (fp)
     return cb(null, fp)
   else 
@@ -15,6 +21,7 @@ module.exports = function(dir, name, cb) {
 
 function findRealPathSync(dir, name) {
   var filepath = path.join(dir, name);
+  console.log(filepath);
   try {
     fs.accessSync(filepath); // will throw here if not found.
     return filepath;
