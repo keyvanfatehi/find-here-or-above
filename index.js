@@ -21,7 +21,6 @@ module.exports = function(dir, name, cb) {
 
 function findRealPathSync(dir, name) {
   var filepath = path.join(dir, name);
-  console.log(filepath);
   try {
     fs.accessSync(filepath); // will throw here if not found.
     return filepath;
